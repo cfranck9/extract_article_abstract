@@ -66,6 +66,7 @@ class Article:
             return ''
         if self.doi:
             self.title = self.fetch_article_title_with_doi(self.doi)
+        # update line 70 with your local Chrome Driver location
         driver = webdriver.Chrome(r'C:\Users\Chung Koo\.PyCharmCE2018.3\config\scratches\chromedriver.exe')
         article_id = self.fetch_article_id_with_title(driver, self.title)
         abstract = ''
